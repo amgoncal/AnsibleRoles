@@ -1,7 +1,7 @@
 ---
 # tasks file for /etc/ansible/roles/motd
 - name: set motd
-  become: yes
+  become: no
   template:
     src: files/motd.j2
     dest: /etc/motd
