@@ -5,10 +5,15 @@
 
   tasks:
 
-- name: Call Roles
-  hosts: localhost
-  roles:
-   - hostname
+# test Americo
+- name: "Hostname"
+  debug:
+  msg: "hostname {{ inventory_hostname }}"
+  
+#- name: Call Roles
+#  hosts: localhost
+#  roles:
+#   - hostname
    #- firewalld
    #- ntp-config
    #- motd
