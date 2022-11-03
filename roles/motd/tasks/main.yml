@@ -2,6 +2,7 @@
 # tasks file for /etc/ansible/roles/motd
 - name: set motd
   become: yes
+  become_method: su
   template:
     src: files/motd.j2
     dest: /etc/motd
