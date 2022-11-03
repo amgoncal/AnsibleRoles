@@ -13,8 +13,6 @@
 #    regexp: "^127.0.0.1"
 #    state: present
     
-
----
-# tasks file for /etc/ansible/roles/motd
+# test Americo
 - name: hostname
   become: no
