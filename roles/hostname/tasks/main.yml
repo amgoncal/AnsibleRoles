@@ -14,5 +14,6 @@
 #    state: present
     
 # test Americo
-- name: hostname
-  become: no
+- name: "hostname"
+  debug:
+  msg: "hostname {{ inventory_hostname }}"
