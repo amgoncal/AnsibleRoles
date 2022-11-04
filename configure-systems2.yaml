@@ -16,7 +16,7 @@
 # test Americo
 ---
   - name: "Orchestration Example"
-    hosts: localhost
+    hosts: servers
     
     tasks:
     
