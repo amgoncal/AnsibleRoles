@@ -1,6 +1,6 @@
 ---
 # tasks file for /etc/ansible/roles/hostname
-- name: Set Hostname
+- name: set hostname
   become: no
   #hostname:
   #  name: "{{ inventory_hostname }}"#
