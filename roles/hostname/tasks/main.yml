@@ -1,9 +1,10 @@
 ---
 # tasks file for /etc/ansible/roles/hostname
-#- name: Set Hostname
-#  become: yes
-#  hostname:
-#    name: "{{ inventory_hostname }}"#
+- name: Set Hostname
+  become: no
+  msg: "hostname {{ inventory_hostname }}"
+  #hostname:
+  #  name: "{{ inventory_hostname }}"#
 
 #- name: edit /etc/hosts
 #  become: yes
@@ -14,6 +15,6 @@
 #    state: present
     
 # test Americo
-- name: "Hostname"
-      #debug:
-        msg: "hostname {{ inventory_hostname }}"
+#- name: "Hostname"
+#      #debug:
+#        msg: "hostname {{ inventory_hostname }}"
