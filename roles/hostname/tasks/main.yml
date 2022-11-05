@@ -2,7 +2,6 @@
 # tasks file for /etc/ansible/roles/hostname
 - name: Set Hostname
   become: no
-  msg: "hostname {{ inventory_hostname }}"
   #hostname:
   #  name: "{{ inventory_hostname }}"#
 
