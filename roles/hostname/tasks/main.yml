@@ -1,7 +1,7 @@
 ---
 # tasks file for /etc/ansible/roles/hostname
-- name: set hostname
-  become: no
+#- name: set hostname
+#  become: no
   #hostname:
   #  name: "{{ inventory_hostname }}"#
 
@@ -17,3 +17,7 @@
 #- name: "Hostname"
 #      #debug:
 #        msg: "hostname {{ inventory_hostname }}"
+
+- name: printing variable with adding some extra message
+debug:
+msg: "Hi This Is {{ inventory_hostname }}"
