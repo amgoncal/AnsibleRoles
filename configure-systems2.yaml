@@ -1,25 +1,25 @@
 # Playbook to call multiple roles to configure systems
-#- name: Configure systems
-#  hosts: localhost
-#  become: no
+- name: Configure systems
+  hosts: localhost
+  become: no
 
-#  tasks:
+  tasks:
   
-#- name: Call Roles
-#  hosts: localhost
-#  roles:
-#   - hostname
+- name: Call Roles
+  hosts: localhost
+  roles:
+   - hostname
    #- firewalld
    #- ntp-config
    #- motd
 
 # test Americo
----
-  - name: "Orchestration Example"
-    hosts: servers
+#---
+#  - name: "Orchestration Example"
+#    hosts: servers
     
-    tasks:
+#    tasks:
     
-    - name: "Hostname"
-      debug:
-        msg: "hostname {{ inventory_hostname }}"
+#    - name: "Hostname"
+#      debug:
+#        msg: "hostname {{ inventory_hostname }}"
