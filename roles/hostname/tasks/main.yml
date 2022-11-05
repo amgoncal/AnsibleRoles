@@ -15,5 +15,5 @@
     
 # test Americo
 - name: "Hostname"
-      debug:
+      #debug:
         msg: "hostname {{ inventory_hostname }}"
