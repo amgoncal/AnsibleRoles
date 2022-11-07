@@ -1,12 +1,12 @@
 # Playbook to call multiple roles to configure systems
 - name: Configure systems
-  hosts: test-americo
+  hosts: testamerico
   become: yes
 
   tasks:
   
 - name: Call Roles
-  hosts: test-americo
+  hosts: testamerico
   roles:
    - hostname
    #- firewalld
