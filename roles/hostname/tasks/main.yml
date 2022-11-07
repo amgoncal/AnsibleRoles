@@ -1,23 +1,14 @@
-#---
-- name: printing variable with adding some extra message
-debug:
-msg: "Hi This Is {{ inventory_hostname }}"
-#
-# tasks file for /etc/ansible/roles/hostname
-#- name: set hostname
-#  become: no
-  #hostname:
-  #  name: "{{ inventory_hostname }}"#
+---
+# tasks file for roles/hostname
+- name: Set Hostname
+  become: yes
+  hostname:
+    name: "{{ inventory_hostname }}"
 
-#- name: edit /etc/hosts
-#  become: yes
-#  lineinfile:
-#    dest: /etc/hosts
-#    line: "{{ ansible_facts.default_ipv4.address }} {{ ansible_facts.hostname }}.{{ ansible_facts.fqdn }}"
-#    regexp: "^127.0.0.1"
-#    state: present
-    
-# test Americo
-#- name: "Hostname"
-#      #debug:
-#        msg: "hostname {{ inventory_hostname }}"
+- name: edit /etc/hosts
+  become: yes
+  lineinfile:
+    dest: /etc/hosts
+    line: "{{ ansible_facts.default_ipv4.address }} {{ ansible_facts.hostname }}.{{ ansible_facts.fqdn }}"
+    regexp: "^127.0.0.1"
+    state: present
