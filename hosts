@@ -1,2 +1,2 @@
 [test-americo]
-10.239.225.216  ansible_connection=ssh
+10.239.225.216  ansible_connection=ssh  ansible_ssh_user=i813659
