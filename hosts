@@ -1,2 +1,2 @@
-[servers]
-localhost          ansible_connection=local
+[test-americo]
+10.239.225.216
